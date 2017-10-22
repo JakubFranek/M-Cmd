@@ -26,10 +26,10 @@ begin
 		end if;
 	end process;
 	
-	d_int <= (others=>'0') when (q_reg=(To_Unsigned(HF,10)+To_Unsigned(HD,10)+To_Unsigned(HR,10)+To_Unsigned(HB,10)-1)) else
+	d_int <= (others=>'0') when (q_reg = To_Unsigned(HF+HD+HR+HB-1,10)) else
 				q_reg+1;
 				
-	o_HOVF <= 	'1' when (q_reg = (To_Unsigned(HF,10)+To_Unsigned(HD,10)+To_Unsigned(HR,10)+To_Unsigned(HB,10)-1) and i_CLK_EN = '1') else
+	o_HOVF <= 	'1' when ((q_reg = To_Unsigned(HF+HD+HR+HB-1,10)) and (i_CLK_EN = '1')) else
 					'0';
 	o_HCOUNT <= std_logic_vector(q_reg);			
 

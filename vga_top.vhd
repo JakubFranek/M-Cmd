@@ -14,7 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity vga_top is
     Port ( i_clk : in  STD_LOGIC;
-           o_hsync,o_vsync,o_r,o_g,o_b : out  STD_LOGIC);
+           o_hsync, o_vsync, o_r, o_g, o_b : out  STD_LOGIC);
 end vga_top;
 
 architecture Behavioral of vga_top is

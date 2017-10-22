@@ -18,7 +18,7 @@ architecture Behavioral of vga_sync is
 	constant VF : integer := 10;
 	constant VD : integer := 480;
 	constant VR : integer := 2;
-	constant VB : integer := 33;
+	constant VB : integer := 29;		--33	/ 29
 ------------------------------------		
 component v_count is
 		Generic (VR, VB, VD, VF : integer);
@@ -58,11 +58,11 @@ Unit3: h_count
 	Port map(i_CLK => i_CLK, i_CLK_EN => r_EN_25M, o_HCOUNT => r_HCOUNT, o_HOVF => r_HOVF);	
 ------------------------------------
 
-o_VSYNC <= 	'0' when (r_VCOUNT > (Std_logic_vector(to_Unsigned(VD+VF, 10))) and (r_VCOUNT <Std_logic_vector(to_Unsigned(VD+VF+VR,10)))) else
+o_VSYNC <= 	'0' when (r_VCOUNT > (Std_logic_vector(to_Unsigned(VD+VF-1, 10))) and (r_VCOUNT < Std_logic_vector(to_Unsigned(VD+VF+VR,10)))) else					-- 490 - 491 je '0'
 				'1';
-o_HSYNC <= 	'0' when (r_HCOUNT > (Std_logic_vector(to_Unsigned(HD+HF,10))) and (r_HCOUNT < Std_logic_vector(to_Unsigned(HD+HF+HR,10)))) else
+o_HSYNC <= 	'0' when (r_HCOUNT > (Std_logic_vector(to_Unsigned(HD+HF-1,10))) and (r_HCOUNT < Std_logic_vector(to_Unsigned(HD+HF+HR,10)))) else				-- 656 - 751 je '0'
 				'1';
-o_VIDEO_ON <= 	'1' when (r_VCOUNT < Std_logic_vector(to_Unsigned(VD,10)) and r_HCOUNT < Std_logic_vector(to_Unsigned(HD,10)))	else
+o_VIDEO_ON <= 	'1' when (r_VCOUNT < Std_logic_vector(to_Unsigned(VD,10)) and r_HCOUNT < Std_logic_vector(to_Unsigned(HD,10)))	else									-- do 639 x 479
 					'0';
 
 o_LINE_TICK <= r_HOVF;

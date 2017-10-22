@@ -12,14 +12,14 @@ end pixel_gen;
 
 architecture Behavioral of pixel_gen is
 
-signal w_comp0_80, w_comp80_160,w_comp160_240,w_comp240_320,w_comp320_400,w_comp400_480,w_comp480_560,w_comp560_640 :std_logic;
+signal w_comp0_80, w_comp80_160,w_comp160_240,w_comp240_320,w_comp320_400,w_comp400_480,w_comp480_560,w_comp560_640 : std_logic;
 
 signal r_pixel_x : unsigned(9 downto 0);
 
 begin
 r_pixel_x <= unsigned(i_pixel_x);
 
-w_comp0_80 <= '1' when r_pixel_x > 0 and r_pixel_x < 80 else '0';
+w_comp0_80 <= '1' when r_pixel_x >= 0 and r_pixel_x < 80 else '0';				--nutno od nuly, aby neprechazela barva do dalsiho radku!
 w_comp80_160 <= '1' when r_pixel_x > 79 and r_pixel_x < 160 else '0';
 w_comp160_240 <= '1' when r_pixel_x > 159 and r_pixel_x < 240 else '0';
 w_comp240_320 <= '1' when r_pixel_x > 239 and r_pixel_x < 320 else '0';

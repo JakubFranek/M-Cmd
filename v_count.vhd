@@ -26,10 +26,10 @@ begin
 		end if;
 	end process;
 	
-	d_int <= (others=>'0') when (q_reg=(To_Unsigned(VF,10)+To_Unsigned(VD,10)+To_Unsigned(VR,10)+To_Unsigned(VB,10)-1)) else
+	d_int <= (others=>'0') when (q_reg = To_Unsigned(VF+VD+VR+VB-1,10)) else
 				q_reg+1;
 				
-	o_VOVF <= 	'1' when (q_reg = (To_Unsigned(VF,10)+To_Unsigned(VD,10)+To_Unsigned(VR,10)+To_Unsigned(VB,10)-1)) else
+	o_VOVF <= 	'1' when (q_reg = To_Unsigned(VF+VD+VR+VB-1,10)) else
 					'0';
 	o_VCOUNT <= std_logic_vector(q_reg);			
 
