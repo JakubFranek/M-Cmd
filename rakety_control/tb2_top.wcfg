@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/VUT/TRETAK/DIGITALY/Missile_Command/lfsr_test/tb_top2_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_top2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/tb_top2/i_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/r_clk_100k" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">r_clk_100k</obj_property>
+      <obj_property name="ObjectShortName">r_clk_100k</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/i_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">LFSR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/i_start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_start</obj_property>
+      <obj_property name="ObjectShortName">i_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/i_seed_dv" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_seed_dv</obj_property>
+      <obj_property name="ObjectShortName">i_seed_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit1/o_lfsr_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_lfsr_done</obj_property>
+      <obj_property name="ObjectShortName">o_lfsr_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit1/i_seed_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_seed_data[9:0]</obj_property>
+      <obj_property name="ObjectShortName">i_seed_data[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit1/o_lfsr_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_lfsr_data[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_lfsr_data[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit3/o_lfsr_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_lfsr_done</obj_property>
+      <obj_property name="ObjectShortName">o_lfsr_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit3/i_seed_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_seed_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i_seed_data[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit3/o_lfsr_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_lfsr_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_lfsr_data[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider25" type="divider">
+      <obj_property name="label">timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit2/r_count_target" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r_count_target[9:0]</obj_property>
+      <obj_property name="ObjectShortName">r_count_target[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit2/r_present_count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r_present_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">r_present_count[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit2/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/o_running" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_running</obj_property>
+      <obj_property name="ObjectShortName">o_running</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/o_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_en</obj_property>
+      <obj_property name="ObjectShortName">o_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider24" type="divider">
+      <obj_property name="label">raketa</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/o_display" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_display</obj_property>
+      <obj_property name="ObjectShortName">o_display</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/o_x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_x[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/o_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_y[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit5/present_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit5/r_angle" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r_angle[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r_angle[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit5/w_dx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w_dx[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_dx[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top2/uut/unit5/w_dy" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w_dy[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_dy[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
